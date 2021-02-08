@@ -1,0 +1,35 @@
+.main {
+  margin: 0 auto;
+
+  margin-top: 20px;
+
+  width: 340px;
+  height: 100%;
+
+  background-color: rgb(111, 150, 202);
+  border: 1px solid #000;
+  border-radius: 15px;
+}
+
+.title {
+  margin-top: 10px;
+  margin-bottom: 40px;
+
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+
+  text-align: center;
+}
+
+.input {
+  display: flex;
+  margin: 10px auto;
+
+  width: 200px;
+}
+
+.button {
+  display: flex;
+  margin: 10px auto;
+}
