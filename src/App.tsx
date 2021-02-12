@@ -2,45 +2,32 @@
 import { compose } from 'redux'
 import React from 'react'
 import { connect } from 'react-redux'
-import { Redirect, Route, withRouter } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import './App.css'
 import AuthPage from './components/AuthPage/AuthPage'
 import ProfilePage from './components/ProfilePage/ProfilePage'
+import FeedPage from './components/FeedPage/FeedPage'
 
 interface IMyProps {
-  isAuth: boolean
+  isAuth: any
 }
 
-interface IMyState {
+interface IMyState {}
 
-}
-
-class App extends React.Component<IMyProps, IMyState> {
-  componentDidMount() {
-    // this.props.initializeApp()
-  }
-
+const App: React.FC<IMyProps> = (props: any) => {
   
 
-  render() {
-    if (this.props.isAuth) {
-    return <Redirect to='/profile' />
-    }
-    return (
-      <div>
-        <Route path='/quizlab' render={ () => <AuthPage />}  />
-        <Route path="/profile" render={ () => <ProfilePage /> } />
-      </div>
-    )  
-  }
-  
+  return (
+    <div>
+      <Route exact path="/quizlab" render={() => <AuthPage />} />
+      <Route path="/profile" render={() => <ProfilePage />} />
+      <Route path="/feed"    render={() => <FeedPage />} />
+    </div>
+  )
 }
 
 const mapStateToPtops = (state: any) => ({
   isAuth: state.authPage.isAuth,
 })
 
-export default compose(
-  
-  connect(mapStateToPtops, {}))
-  (App)
+export default compose(connect(mapStateToPtops, {}))(App)

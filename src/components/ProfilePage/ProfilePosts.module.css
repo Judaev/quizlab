@@ -1,0 +1,25 @@
+.main {
+  margin: 10px 30px;
+  padding: 10px;
+
+  border: 1px solid #000;
+  border-radius: 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 5px;
+}
+
+.userName {
+  font-weight: 700;
+}
+
+.like {
+  width: 25px;
+  height: 25px;
+
+  cursor: pointer;
+}

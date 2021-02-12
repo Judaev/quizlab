@@ -1,0 +1,24 @@
+.main {
+  margin: 0 auto;
+
+  margin-top: 20px;
+
+  width: 340px;
+  height: 100%;
+
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #000;
+  border-radius: 50px;
+}
+
+.postFilter {
+  display: flex;
+  justify-content: center;
+
+  margin: 15px 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}

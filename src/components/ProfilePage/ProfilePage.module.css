@@ -6,16 +6,53 @@
   width: 340px;
   height: 100%;
 
-  background-color: rgb(111, 150, 202);
+  background-color: rgb(255, 255, 255);
   border: 1px solid #000;
-  border-radius: 15px;
+  border-radius: 50px;
 }
 
 .headerProfile {
   display: flex;
   justify-content: center;
+
+  margin: 15px 0;
 }
 
 .userName {
   font-size: 16px;
+  margin-right: 5px;
+}
+
+.subscriptions {
+  margin-right: 5px;
+}
+
+.subButton {
+  display: flex;
+
+  margin: 0 auto;
+  padding: 2px 30px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.backButton {
+  color: #000;
+  text-decoration: none;
+  padding: 2px;
+  cursor: pointer;
+
+}
+
+.addPost {
+  width: 40px;
+  height: 40px;
+
+  margin-left: 10px;
+
+  cursor: pointer;
 }
