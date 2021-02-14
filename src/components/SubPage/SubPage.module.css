@@ -1,0 +1,25 @@
+.main {
+  margin: 0 auto;
+
+  margin-top: 20px;
+
+  width: 340px;
+  height: 100%;
+
+  background-color: rgb(111, 150, 202);
+  border: 1px solid #000;
+  border-radius: 15px;
+}
+
+.title {
+  padding-top: 50px;
+  margin-left: 30px;
+}
+
+.subItem {
+  margin: 10px 20px;
+  padding: 10px;
+
+  border: 1px solid #000;
+  border-radius: 15px
+}

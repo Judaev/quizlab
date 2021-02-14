@@ -1,0 +1,67 @@
+.main {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  margin: 0 auto;
+
+  margin-top: 20px;
+
+  width: 300px;
+  height: 200px;
+
+  background-color: rgb(255, 255, 255);
+  border: 3px solid #000;
+  border-radius: 50px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+}
+
+.textarea {
+  display: flex;
+  margin: 0 auto;
+  resize: none;
+}
+
+.addPostButton {
+  display: flex;
+  margin: 10px auto;
+
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+  padding: 5px 30px;
+  outline: none;
+
+  cursor: pointer;
+
+  border: 1px solid;
+  border-radius: 1px;
+
+}
+
+.addPostButton:hover { background: rgba(255,255,255,.2); }
+.addPostButton:active { background: white; }
+
+.closeButton {
+  display: flex;
+
+  margin: 10px auto;
+  padding: 2px 30px;
+
+  cursor: pointer;
+  outline: none;
+
+  border: none
+}

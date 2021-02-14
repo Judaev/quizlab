@@ -6,24 +6,28 @@ import ProfilePosts from './ProfilePosts'
 import add from '../../images/add.svg'
 import AddPost from './AddPost/AddPost'
 
+
+
 const ProfilePage: React.FC = (props: any) => {
   const [open, setOpen] = useState(false)
+
+  let postElement = props.posts
+  .map( (post: any) => <ProfilePosts key={post.id}  post={post.text} like={post.like} />)
+
   return (
     <div className={style.main}>
       <div className={style.headerProfile}>
         <div className={style.userName}>{props.userName},</div>
-        <div className={style.subscriptions}>{props.subscriptions} подписки,</div>
+        <NavLink to='/subscriptions' className={style.subscriptions}>{props.subscriptions} подписки,</NavLink>
         <div className={style.subscribers}>{props.subscribers} подписчиков</div>
       </div>
       <button className={style.subButton}>Подписаться</button>
-      <ProfilePosts />
-      <ProfilePosts />
-      <ProfilePosts />
+      {postElement}
       <div className={style.footer}>
         <NavLink to='/feed'className={style.backButton} >В ленту</NavLink>
-        <img className={style.addPost} src={add} onClick={() => setOpen(true)} />
+        <img className={style.addPost} src={add} onClick={() => setOpen(!open)} />
       </div>
-      {open && <AddPost />}
+      {open && <AddPost setOpen={setOpen} />}
     </div>
   )
 }
@@ -31,7 +35,8 @@ const ProfilePage: React.FC = (props: any) => {
 let mapStateToPtops = (state: any) => ({
   userName: state.authPage.userName,
   subscriptions: state.authPage.subscriptions,
-  subscribers: state.authPage.subscribers
+  subscribers: state.authPage.subscribers,
+  posts: state.profilePage.posts
 })
 
 
